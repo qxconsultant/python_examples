@@ -12,6 +12,7 @@ gpa.py is a python script to parse json format grades inputs into GPA into csv f
 * open the csv file with Excel Spreadsheet
 
 example of CSV to Markdown
+
 |Term       |Course    |Credit|Grade|TERM GPA|CUM GPA|
 |-----------|----------|------|-----|--------|-------|
 |FALL 2017  | BIOL200  | 3    | B+  |        |       |
