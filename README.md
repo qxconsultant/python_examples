@@ -6,9 +6,14 @@ gpa.py is a python script to parse json format grades inputs into GPA into csv f
 
 ### execution through online Python compiler
 * open Online Python compiler (i.e https://repl.it/languages/python3) in web browser
-* copy paste gpa.py content into main.py
-* click "run" to execute Pyhton script
-* gps.csv result file will be generated after the execution
+* click `+new repl` to import from GitHub https://github.com/qxconsultant/python_examples.git
+* from console, 
+ * check imported files list via `ls -l`
+ * check Git branch via `git branch -a`
+ * switch to feature/new_csv branch via `git checkout -b feature/new_csv origini/feature/new_csv`
+ * update gpa.json input file via `vi gpa.json`
+ * execute `python gpa.py`, generates gps.csv
+ * check the content of gpa.csv via `cat gpa.csv`
 
 example of CSV to Markdown
 

@@ -1,35 +1,23 @@
 """
 a simple python script to parse json format grades inputs into GPA into csv format
 """
-grades_to_points = {
-    'A': '4.0',
-    'A-': '3.7',
-    'B+': '3.3',
-    'B': '3.0',
-    'B-': '2.7',
-    'C+': '2.3',
-    'C': '2.0',
-    'D': '1.0',
-    'F': '0'
-}
-scores = [
-    {'course': 'biol200', 'credit': '3', 'grade': 'B+', 'year': 'fall 2017'},
-    {'course': 'math203', 'credit': '3', 'grade': 'B+', 'year': 'fall 2017'},
-    {'course': 'mimm211', 'credit': '3', 'grade': 'B', 'year': 'fall 2017'},
-    {'course': 'mimm212', 'credit': '3', 'grade': 'A', 'year': 'fall 2017'},
-    {'course': 'chem181', 'credit': '3', 'grade': 'A', 'year': 'winter 2018'},
-    {'course': 'biol300', 'credit': '3', 'grade': 'B', 'year': 'fall 2018'},
-    {'course': 'biol306', 'credit': '3', 'grade': 'B', 'year': 'fall 2018'},
-    {'course': 'esat204d1', 'credit': '4.5', 'grade': 'A-', 'year': 'fall 2018'},
-    {'course': 'biol201', 'credit': '3', 'grade': 'B+', 'year': 'winter 2019'},
-    {'course': 'biol303', 'credit': '3', 'grade': 'B-', 'year': 'winter 2019'},
-    {'course': 'biol313', 'credit': '3', 'grade': 'B+', 'year': 'winter 2019'},
-    {'course': 'esat204d2', 'credit': '4.5', 'grade': 'A-', 'year': 'winter 2019'},
-    {'course': 'biol202', 'credit': '3', 'grade': 'C+', 'year': 'summer 2019'}
-]
+
+import os
+import json
+
+
+def load_config(file_path):
+    with open(file_path) as data_sets:
+        return json.load(data_sets)
 
 
 def main():
+    gpa_input_path = os.path.join(os.getcwd(), "gpa.json")
+    if not os.path.exists(gpa_input_path):
+        Exception('{} does not exist!'.format(gpa_input_path))
+    data_sets = load_config(gpa_input_path)
+    scores = data_sets['scores']
+    grades_to_points = data_sets['grades_to_points']
     semester_list = [score['year'] for score in scores]
     semester_dict = {key: semester_list.count(key) for key in semester_list}
     terms = semester_dict.keys()
