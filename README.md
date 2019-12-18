@@ -8,8 +8,7 @@ gpa.py is a python script to parse json format grades inputs into GPA into csv f
 * open Online Python compiler (i.e https://repl.it/languages/python3) in web browser
 * copy paste gpa.py content into main.py
 * click "run" to execute Pyhton script
-* copy execution results and save into a csv file
-* open the csv file with Excel Spreadsheet
+* gps.csv result file will be generated after the execution
 
 example of CSV to Markdown
 
