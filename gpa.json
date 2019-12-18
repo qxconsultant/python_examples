@@ -1,0 +1,28 @@
+{
+  "grades_to_points": {
+    "A": "4.0",
+    "A-": "3.7",
+    "B+": "3.3",
+    "B": "3.0",
+    "B-": "2.7",
+    "C+": "2.3",
+    "C": "2.0",
+    "D": "1.0",
+    "F": "0"
+  },
+  "scores": [
+    {"course": "biol200", "credit": "3", "grade": "B+", "year": "fall 2017"},
+    {"course": "math203", "credit": "3", "grade": "B+", "year": "fall 2017"},
+    {"course": "mimm211", "credit": "3", "grade": "B", "year": "fall 2017"},
+    {"course": "mimm212", "credit": "3", "grade": "A", "year": "fall 2017"},
+    {"course": "chem181", "credit": "3", "grade": "A", "year": "winter 2018"},
+    {"course": "biol300", "credit": "3", "grade": "B", "year": "fall 2018"},
+    {"course": "biol306", "credit": "3", "grade": "B", "year": "fall 2018"},
+    {"course": "esat204d1", "credit": "4.5", "grade": "A-", "year": "fall 2018"},
+    {"course": "biol201", "credit": "3", "grade": "B+", "year": "winter 2019"},
+    {"course": "biol303", "credit": "3", "grade": "B-", "year": "winter 2019"},
+    {"course": "biol313", "credit": "3", "grade": "B+", "year": "winter 2019"},
+    {"course": "esat204d2", "credit": "4.5", "grade": "A-", "year": "winter 2019"},
+    {"course": "biol202", "credit": "3", "grade": "C+", "year": "summer 2019"}
+  ]
+}
