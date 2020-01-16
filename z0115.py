@@ -18,6 +18,9 @@ def main():
         print('{} km from downtown does not be evacuated'.format(distance))
     elif distance < 20:
         pregenent = input("whether pregenent? (Y or N):")
+        if pregenent.isdigit():
+            print('Input "{}" is digit'.format(pregenent))
+            exit(1)
         print('pregenent? {}'.format(pregenent))
         if is_pregenent(pregenent):
             print('{} km from downtown and pregenent, you need be evacuated now'.format(distance))
