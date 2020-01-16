@@ -3,16 +3,17 @@
 import re
 
 
-def is_pregenent(input):
+def is_pregnant(input):
     return_code = False
+    # use regex with case insensitive to handle [Yy][Es][Se] answer
     if re.match(r'^y.*', input, re.IGNORECASE):
         return_code = True
-    print(return_code)
     return return_code
 
 
 def is_digit(input):
     return_code = False
+    # use string isdigit() to verify input is digit or string
     if input.isdigit():
         print('Input "{}" is digit'.format(input))
         return_code = True
@@ -23,19 +24,23 @@ def is_digit(input):
 
 def main():
     distance = input("how far from downtown (in km):")
+    # ensure is digit
     if not is_digit(distance):
+        # exit script with error code 1
         exit(1)
+    # casting to float
     distance = float(distance)
+    # use string format to print, otherwise print("distance: str(distance)")
     print('distance: {}'.format(distance))
     if distance >= 20:
         print('{} km from downtown does not be evacuated'.format(distance))
     elif distance < 20:
-        pregenent = input("whether pregenent?:")
-        if is_digit(pregenent):
+        pregnant = input("whether pregnant?:")
+        if is_digit(pregnant):
             exit(1)
-        print('pregenent? {}'.format(pregenent))
-        if is_pregenent(pregenent):
-            print('{} km from downtown and pregenent, you need be evacuated now'.format(distance))
+        print('pregnant? {}'.format(pregnant))
+        if is_pregnant(pregnant):
+            print('{} km from downtown and pregnant, you need be evacuated now'.format(distance))
         else:
             print('{} km from downtown does not be evacuated'.format(distance))
 
