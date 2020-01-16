@@ -5,7 +5,7 @@ import re
 
 def is_pregnant(input):
     return_code = False
-    # use regex with case insensitive to handle [Yy][Es][Se] answer
+    # use regex with case insensitive to handle [Yy][Es][Ss] answer
     if re.match(r'^y.*', input, re.IGNORECASE):
         return_code = True
     return return_code
@@ -30,7 +30,7 @@ def main():
         exit(1)
     # casting to float
     distance = float(distance)
-    # use string format to print, otherwise print("distance: str(distance)")
+    # use string format to print, otherwise print("distance: " + str(distance))
     print('distance: {}'.format(distance))
     if distance >= 20:
         print('{} km from downtown does not be evacuated'.format(distance))
