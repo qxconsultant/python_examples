@@ -7,10 +7,19 @@ def is_pregenent(input):
     return return_code
 
 
+def is_digit(input):
+    return_code = False
+    if input.isdigit():
+        print('Input "{}" is digit'.format(input))
+        return_code = True
+    else:
+        print('Input "{}" is not digit'.format(input))
+    return return_code
+
+
 def main():
     distance = input("how far from downtown (in km):")
-    if not distance.isdigit():
-        print('Input "{}" is not digit'.format(distance))
+    if not is_digit(distance):
         exit(1)
     distance = float(distance)
     print('distance: {}'.format(distance))
@@ -18,8 +27,7 @@ def main():
         print('{} km from downtown does not be evacuated'.format(distance))
     elif distance < 20:
         pregenent = input("whether pregenent? (Y or N):")
-        if pregenent.isdigit():
-            print('Input "{}" is digit'.format(pregenent))
+        if is_digit(pregenent):
             exit(1)
         print('pregenent? {}'.format(pregenent))
         if is_pregenent(pregenent):
