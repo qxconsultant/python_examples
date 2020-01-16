@@ -8,7 +8,11 @@ def is_pregenent(input):
 
 
 def main():
-    distance = float(input("how far from downtown (in km):"))
+    distance = input("how far from downtown (in km):")
+    if not distance.isdigit():
+        print('Input "{}" is not digit'.format(distance))
+        exit(1)
+    distance = float(distance)
     print('distance: {}'.format(distance))
     if distance >= 20:
         print('{} km from downtown does not be evacuated'.format(distance))
