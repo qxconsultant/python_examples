@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 
+import re
+
+
 def is_pregenent(input):
     return_code = False
-    if input == 'Y':
+    if re.match(r'^y.*', input, re.IGNORECASE):
         return_code = True
+    print(return_code)
     return return_code
 
 
@@ -26,7 +30,7 @@ def main():
     if distance >= 20:
         print('{} km from downtown does not be evacuated'.format(distance))
     elif distance < 20:
-        pregenent = input("whether pregenent? (Y or N):")
+        pregenent = input("whether pregenent?:")
         if is_digit(pregenent):
             exit(1)
         print('pregenent? {}'.format(pregenent))
