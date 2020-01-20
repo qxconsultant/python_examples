@@ -4,6 +4,7 @@ Created on Mon Jan 20 00:07:38 2020
 
 @author: qxie
 """
+##
 
 livedoid = input("Livedoid skin rash (Yes or No)? ")
 if livedoid == "Yes":
